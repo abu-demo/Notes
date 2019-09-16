@@ -39,10 +39,10 @@ let 块级作用域 函数为作用域单元 内部变量隐藏
 
 在 JavaScript 中，构造函数只是一些 使用 new 操作符时被调用的函数。
 
-- 创建\(或者说构造\)一个全新的对象。  
-- 这个新对象会被执行\[\[原型\]\]连接。  
-- 这个新对象会绑定到函数调用的this。  
-- 如果函数没有返回其他对象，那么new表达式中的函数调用会自动返回这个新对象。
+* 创建\(或者说构造\)一个全新的对象。  
+* 这个新对象会被执行\[\[原型\]\]连接。  
+* 这个新对象会绑定到函数调用的this。  
+* 如果函数没有返回其他对象，那么new表达式中的函数调用会自动返回这个新对象。
 
 5）this绑定优先级
 
@@ -50,11 +50,11 @@ new -&gt; call、apply -&gt; 上下文调用 -&gt;默认指向
 
 6）绑定例外
 
-- 显示绑定 参数为null
+* 显示绑定 参数为null
 
-- 绑定丢失
+* 绑定丢失
 
-- 软绑定 为默认的this指向进行设置
+* 软绑定 为默认的this指向进行设置
 
 7）箭头函数 根据外层\(函数或者全局\)作用域来决定 this指向 且无法更改
 
@@ -76,37 +76,39 @@ ES6 新增 可计算属性名 \[\]包裹表达式
 
 复制对象
 
-- 浅拷贝ES6 Obect.assign\(\) 不会复制属性描述
+* 浅拷贝ES6 Obect.assign\(\) 不会复制属性描述
 
-- 深拷贝var newObj = JSON.parse\( JSON.stringify\( someObj \) \); 要求JSON安全
+* 深拷贝var newObj = JSON.parse\( JSON.stringify\( someObj \) \); 要求JSON安全
 
 属性描述符
 
-- writable（可写） - enumerable（可枚举） - configurable （可配置）
+* writable（可写） - enumerable（可枚举） - configurable （可配置）
 
-- Object.defineProperty\(\)添加或者修改属性
+* Object.defineProperty\(\)添加或者修改属性
 
 属性不可变性
 
-- wirtable:false configurable:false
+* wirtable:false configurable:false
 
-- Object.preventExtensions\(\) 不可扩展 - Object.seal\(\) 密封 - Object.freeze\(\) 冻结
+* Object.preventExtensions\(\) 不可扩展 - Object.seal\(\) 密封 - Object.freeze\(\) 冻结
 
 查看对象属性
 
-- hasOwnProperty\(\) 属性是否存在于对象中
+* hasOwnProperty\(\) 属性是否存在于对象中
 
-- in 属性是否存在于对象和原型链中 要求可枚举属性
+* in 属性是否存在于对象和原型链中 要求可枚举属性
 
-- Object.keys 返回对象中可枚举属性数组
+* Object.keys 返回对象中可枚举属性数组
 
-- Object.getOwnPrepoertyNames\(\)返回对象中包含所有可枚举以及不可枚举的属性数组
+* Object.getOwnPrepoertyNames\(\)返回对象中包含所有可枚举以及不可枚举的属性数组
 
 遍历属性值
 
-- for 循环
+* for 循环
 
-- ES5辅助迭代器 -forEach\(\) 忽略返回值 - every\(\) 返回false终止 - some\(\) 返回true终止
+* ES5辅助迭代器 -forEach\(\) 忽略返回值 - every\(\) 返回false终止 - some\(\) 返回true终止
 
-- ES6 for..of next\(\) 方法返回形式 {value: .. , done: ..}的值
+* ES6 for..of next\(\) 方法返回形式 {value: .. , done: ..}的值
+
+
 
