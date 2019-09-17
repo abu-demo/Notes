@@ -40,7 +40,7 @@ return v.toUpperCase\(\) + ".";
 
 prototype.tofixed\(\) 指定小数点后显示位数 四舍五入
 
-prototype.toPrecision\(\) 有效数位显示位数 
+prototype.toPrecision\(\) 有效数位显示位数
 
 注意：“.”是有效数字运算符 所以 42.tofixed\(\)不成立 要42..tofixed\(\)才可得42
 
@@ -80,7 +80,7 @@ new创建的是基本封装对象
 
 * RegExp\(\) 动态创建正则可使用 （常用）
 
-* Date\(\) 只能new 参数为事件 默认为当前unix时间戳 Date.now\(\) 
+* Date\(\) 只能new 参数为事件 默认为当前unix时间戳 Date.now\(\)
 
 * Error\(\)
 
@@ -88,7 +88,7 @@ new创建的是基本封装对象
 
 原生原型 function是空函数 RegExp\(\)是空正则 Array是空数组可修改
 
-## 4 
+## 4
 
 #### 强制类型转换
 
