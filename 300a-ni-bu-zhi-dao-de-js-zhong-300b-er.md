@@ -2,9 +2,13 @@
 
 #### 事件循环
 
-每一轮微一个**Tick**  任务队列 在每一个tick之后
+每一轮微一个**Tick** 
 
-回调
+主任务**栈** 函数调用形成**栈针**一次压栈 待处理事件形成**队列** 期间的对象分配在**堆**内存中
+
+队列 微任务 nextTick callback promise process.nextTick 宏任务 settimeout setInterval IO sprit代码块
+
+#### 回调
 
 * 不够直观难以追踪
 
@@ -26,9 +30,9 @@ Promise信任问题
 
 * 调用次数过多或者过少 Promise只决议一次 如果注册了多次 那就和注册次数相同
 
-* 未能传参 如果没有任何显式决议 那这个值就是undefined 
+* 未能传参 如果没有任何显式决议 那这个值就是undefined
 
-* 吞掉错误 或 异常 导致return的Promise被拒绝 所以下面的Promise无法继续执行 
+* 吞掉错误 或 异常 导致return的Promise被拒绝 所以下面的Promise无法继续执行
 
 链式流
 
@@ -129,7 +133,7 @@ worker环境
 
 * 现在 如果传递一个对象 可以使用“结构化克隆算法”  甚至可以处理对象有循环引用的情况 还是要双倍内存
 
-* 对于大数据集 可以使用Transferable对象 对象所有权转移 数据没有移动 
+* 对于大数据集 可以使用Transferable对象 对象所有权转移 数据没有移动
 
 #### 共享worker
 
@@ -145,7 +149,7 @@ w1.port.postMessage\( "something cool" \);
 
 connect 为特定连接提供端口对象 函数内部
 
-#### SIMD 
+#### SIMD
 
 单指令多数据 数据并行 利用低级指令级并行的底层运算
 
