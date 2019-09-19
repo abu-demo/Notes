@@ -13,6 +13,10 @@
 * [《深入理解nodejs》一](book/300a-shen-ru-li-jie-nodejs-300b-yi.md)
 * [深入理解ES6](book/shen-ru-li-jie-es6.md)
 
+## KNOW
+
+* [js](book/js.md)
+
 ## VUE
 
 * [vue](vue/vue.md)
