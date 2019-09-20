@@ -15,13 +15,12 @@
 
 ## KNOW
 
-* [js](book/js.md)
+* [协议](book/xie-yi.md)
+* [数组去重](book/js.md)
 
 ## VUE
 
 * [vue](vue/vue.md)
 * [vue-Router](vue/vue-router.md)
 * [面经](vue/mian-jing.md)
-
-
 
