@@ -89,7 +89,7 @@ Conetnt-Type: text/html
 
 #### 状态码
 
-##### 1 消息 已被接受 需要继续处理 
+##### 1 消息 已被接受 需要继续处理
 
 * 100 Continue 客户端应当继续发送请求 
 
@@ -124,7 +124,16 @@ Conetnt-Type: text/html
 * 409 Conflict 被请求资源的当前状态之间存在冲突 
 * 410 Gone 资源已经不可用
 
+##### 5 服务器错误 
 
+* 500 Internal Server Error 服务器遇到了一个未曾预料的状况
+* 501 Not Implemented 服务器不支持当前请求所需要的某个功能
+* 502 Bad Gateway 作为网关 或者代理工作的服务器尝试执行请求时，从上游服务器接受到无效的响应
+* 503 Service Unavailable 由于临时的服务器维护或者过载 服务器当前无法处理请求
+* 504 Gateway Timeout 作为网关 或者代理工作的服务器尝试执行请求时，未能及时从上游服务器或者辅助服务器收到相应
+* 505 HTTP Version Not Supported 服务器不支持 或者拒绝支持在请求中使用的HTTP版本
+* 506 Variant Also Negotiates 服务器存在内部配置错误
+* 600 Unparseable Response Headers 源站没有返回响应头部 只返回实体内容
 
 
 
