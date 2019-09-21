@@ -15,7 +15,8 @@
 
 ## KNOW
 
-* [协议](book/xie-yi.md)
+* [HTTP协议](book/httpxie-yi.md)
+* [HTTP123](book/xie-yi.md)
 * [数组去重](book/js.md)
 
 ## VUE
