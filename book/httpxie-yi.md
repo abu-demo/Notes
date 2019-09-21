@@ -31,9 +31,36 @@ POST /chapter7/user.html HTTP/1.1
 * ##### 请求头 header
 
 ```js
-HOST: coolqb.top  //主机名 虚拟主机 域名 DNS解析为IP地址
-Connection: keep-live //长连接
+HOST: coolqb.top:8080  //主机名 虚拟主机 域名 DNS解析为IP地址
+Connection: keep-live //表示是否需要持久连接
 User-Agent: //请求发出着 兼容性以及定制化需求
+Accept:text/plain, text/html //制定客户端能够接受的内容类型
+Accept-Charset: iso-8859-5 //浏览器可以接受的字符编码集
+Accept-Encoding: compress, gzip //浏览器可以值吃的web服务器返回内容压缩编码类型
+Accept-Language: en, zh //浏览器可接受的语言
+Accept-Ranges: bytes //可以请求网页实体的一个或者多个子范围字段
+Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ== //HTTP授权的授权证书
+Cache-Control: no-cache //制定请求和响应遵循的缓存机制
+Cookie: $Version=1;Skin=new //请求会携带该域名下所有cookie值
+Content-Length: 348 //请求的内容长度
+Conent-Type: application //请求与实体对应的MIME信息
+Date: Tue, 15 Nov 2010 08:12:31 GMT //请求发送的日期和时间
+Expect: 100-continue //请求特定的服务器行为
+From: user@email.com //发出请求的用户Email
+If-Match: “737060cd8c284d8af7ad3082f209582d” //请求内容与实体匹配生效
+If-Modified-Since: Sat, 29 Oct 2010 19:43:31 GMT //指定时间之后被修改则成功 未修改返回304
+If-None-Match: “737060cd8c284d8af7ad3082f209582d” //内容未改变返回304 参数为服务器先前发送的Etag 与服务器回应的Etag比较是否改变
+If-Range: “737060cd8c284d8af7ad3082f209582d” //未改变 发送丢失的部分 参数也为Etag
+If-Unmodified-Since: Sat, 29 Oct 2010 19:43:31 GMT //指定时间内未修改成功
+Max-Forwards: 10 //限制信息通过代理和网关的传送时间
+Pragma: no-cache //包含实现特定的指令
+Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ== //连接到代理的授权证书
+Range: bytes=500-999 //请求范围内的部分实体
+Referer: http://www.zcmhi.com/archives/71.html //先前网页的地址 当前请求网页紧随其后 即来路
+TE: trailers,deflate;q=0.5 //客户端愿意接受的传输编码
+Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11 //向服务端指定协议
+Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1) //通知中间网关或代理服务器地址 通信协议
+Warn: 199 Miscellaneous warning //消息实体的警告信息
 ```
 
 * ##### 空行 表示请求头已经结束
@@ -55,13 +82,35 @@ HTTP/1.1 200 OK
 * ##### 响应头
 
 ```js
-Server: Apache
-Last-Modified: Fri, 31 Aug 2007 02:02:20 GMT
-ETag: "45bael-16a-46d776ac"
-Accept-Ranges: bytes
-Content-Length: 362
+Server: Apache/1.3.27 (Unix) (Red-Hat/Linux) //web服务器软件名称	
+Age: 12 //从原始服务器到代理缓存形成的估算时间（以秒计，非负）
+Accept-Ranges: bytes //表明服务器是否支持指定范围请求及哪种类型的分段请求
+Allow: GET, HEAD //对某网络资源的有效的请求行为，不允许则返回405
+Cache-Control: no-cache //告诉所有的缓存机制是否可以缓存及哪种类型
+Content-Encoding: gzip //web服务器支持的返回内容压缩编码类型
+Content-Language: en,zh //响应体的语言
+Content-Length: 362 //响应体长度
+Content-Location: /index.htm //请求资源可替代的备用的另一地址
+Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ== //返回资源的MD5校验值
+Content-Range: bytes 21010-47021/47022 //在整个返回体中本部分的字节位置	
 Connect: close
-Conetnt-Type: text/html
+Content-Type: text/html; charset=utf-8 //返回内容的MIME类型
+Date: Tue, 15 Nov 2010 08:12:31 GMT //原始服务器消息发出的时间
+ETag: “737060cd8c284d8af7ad3082f209582d” //请求变量的实体标签的当前值
+Expires: Thu, 01 Dec 2010 16:00:00 GMT //响应过期的日期和时间
+Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT //请求资源的最后修改时间
+Location: http://www.zcmhi.com/archives/94.html //用来重定向接收方到非请求URL的位置来完成请求或标识新的资源
+Pragma: no-cache //包括实现特定的指令，它可应用到响应链上的任何接收方	
+Proxy-Authenticate: Basic //它指出认证方案和可应用到代理的该URL上的参数
+Refresh: 5; url=http://www.atool.org/httptest.php //	应用于重定向或一个新的资源被创造，在5秒之后重定向（由网景提出，被大部分浏览器支持）
+Retry-After: 120 //如果实体暂时不可取，通知客户端在指定时间之后再次尝试
+Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1 //设置Http Cookie	
+Trailer: Max-Forwards //指出头域在分块传输编码的尾部存在	
+Transfer-Encoding:chunked //文件传输编码	
+Vary: * //告诉下游代理是使用缓存响应还是从原始服务器请求
+Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1) //告知代理客户端响应是通过哪里发送的
+Warning: 199 Miscellaneous warning //警告实体可能存在的问题
+WWW-Authenticate: Basic //表明客户端请求实体应该使用的授权方案	
 ```
 
 * ##### 空行
@@ -124,7 +173,7 @@ Conetnt-Type: text/html
 * 409 Conflict 被请求资源的当前状态之间存在冲突 
 * 410 Gone 资源已经不可用
 
-##### 5 服务器错误 
+##### 5 服务器错误
 
 * 500 Internal Server Error 服务器遇到了一个未曾预料的状况
 * 501 Not Implemented 服务器不支持当前请求所需要的某个功能
@@ -134,8 +183,6 @@ Conetnt-Type: text/html
 * 505 HTTP Version Not Supported 服务器不支持 或者拒绝支持在请求中使用的HTTP版本
 * 506 Variant Also Negotiates 服务器存在内部配置错误
 * 600 Unparseable Response Headers 源站没有返回响应头部 只返回实体内容
-
-
 
 
 
