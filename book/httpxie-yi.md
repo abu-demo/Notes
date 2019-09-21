@@ -1,6 +1,6 @@
 ## HTTP协议
 
-超文本传输协议 基于 TCP/IP协议 
+超文本传输协议 基于 TCP/IP协议
 
 #### 特点
 
@@ -13,18 +13,18 @@
 
 #### 请求报文
 
-* ##### 请求行 request line 
+* ##### 请求行 request line
 
 ```js
 POST /chapter7/user.html HTTP/1.1
 //请求方法  GET HEAD POST PUT DELETE
 //URI 
-//协议和协议版本 
+//协议和协议版本
 ```
 
 > ##### GET 和 POST的区别
 >
-> GET  回退无害  浏览器主动缓存  参数保存在浏览器历史记录里 URL长度有限制所以参数有限制 
+> GET  回退无害  浏览器主动缓存  参数保存在浏览器历史记录里 URL长度有限制所以参数有限制
 >
 > POST 回退会再次提交请求 不会主动缓存 参数不会保留 没有限制 请求两次
 
@@ -37,7 +37,6 @@ User-Agent: //请求发出着 兼容性以及定制化需求
 ```
 
 * ##### 空行 表示请求头已经结束
-
 * ##### 请求体
 
 ```js
@@ -65,8 +64,8 @@ Connect: close
 Conetnt-Type: text/html
 ```
 
-* 空行
-* 响应体
+* ##### 空行
+* ##### 响应体
 
 ```js
 <html xmlns="http://www.w3.org/1999/xhtml">
