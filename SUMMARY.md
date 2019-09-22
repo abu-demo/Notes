@@ -18,6 +18,7 @@
 * [HTTP协议](book/httpxie-yi.md)
 * [HTTP123](book/xie-yi.md)
 * [数组去重](book/js.md)
+* [加密](book/jia-mi.md)
 
 ## VUE
 
