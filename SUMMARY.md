@@ -19,6 +19,7 @@
 * [HTTP123](book/xie-yi.md)
 * [数组去重](book/js.md)
 * [加密](book/jia-mi.md)
+* [TCP和UDP比较](book/tcphe-udp-bi-jiao.md)
 
 ## VUE
 
