@@ -36,12 +36,12 @@ document.getElementById("myDiv").innerHTML=xhr.responseText;
 //response 异步处理
  xhr.onreadystatechange=function()  { 
  if (xhr.readyState==4 &&xhr.status==200)  { 
- document.getElementById("myDiv").innerHTML=xhr.responseText;  }} 
+ document.getElementById("myDiv").innerHTML=xhr.responseText;  }}
 ```
 
 ##### readState
 
-标识当前XMLHttpRequest对象处于什么状态 5个状态值 0-4 
+标识当前XMLHttpRequest对象处于什么状态 5个状态值 0-4
 
 * 0：未初始化 -- 尚未调用.open\(\)方法；
 * 1：启动 -- 已经调用.open\(\)方法，但尚未调用.send\(\)方法；
@@ -50,8 +50,6 @@ document.getElementById("myDiv").innerHTML=xhr.responseText;
 * 4：完成 -- 已经接收到全部响应数据，而且已经可以在客户端使用了；
 
 ##### state http状态码
-
-
 
 
 
