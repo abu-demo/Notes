@@ -84,7 +84,7 @@ var localValue = localStorage.getItem("key"); //读物数据
 
 **使用场景**
 
-存储生命周期和它同步的会话级别的信息 
+存储生命周期和它同步的会话级别的信息
 
 ## IndexedDB
 
@@ -101,7 +101,42 @@ var localValue = localStorage.getItem("key"); //读物数据
 
 ##### 常见操作
 
+请求-响应的模式
 
+```js
+window.indexedDB.open("testDB"); //开启
+```
+
+并不会返回一个DB对象的句柄 而是一个IDBOpenDBRequest对象 而我们希望得到的DB对象在其result属性中 除了result还有onerror onsuccess onupgradeneeded
+
+```js
+<script>
+function openDB(name){
+var request=window.indexedDB.open(name)//建立打开IndexedDB
+request.onerror=function (e){
+console.log('open indexdb error')
+}
+request.onsuccess=function (e){
+myDB.db=e.target.result//这是一个 IDBDatabase对象，这就是IndexedDB对象
+console.log(myDB.db)//此处就可以获取到db实例
+}
+}
+var myDB={
+name:'testDB',
+version:'1',
+db:null
+}
+openDB(myDB.name)
+</script>
+```
+
+```js
+IndexDB-----indexdb.close() //关闭
+```
+
+```js
+IndexDB----window.indexedDB.deleteDatabase(indexdb) //删除
+```
 
 
 
