@@ -31,5 +31,6 @@
 ## 浏览器
 
 * [渲染原理](liu-lan-qi/xuan-ran-yuan-li.md)
-* [存储](liu-lan-qi/huan-cun.md)
+* [存储](liu-lan-qi/cun-chu.md)
+* [缓存](liu-lan-qi/huan-cun.md)
 
