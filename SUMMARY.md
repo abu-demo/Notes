@@ -3,6 +3,7 @@
 ## Hello World!
 
 * [hello world](README.md)
+* [plan book](book/plan-book.md)
 
 ## Book
 
@@ -10,7 +11,6 @@
 * [《你不知道的js 中》一](book/300a-ni-bu-zhi-dao-de-js-zhong-300b-yi.md)
 * [《深入理解nodejs》一](book/300a-shen-ru-li-jie-nodejs-300b-yi.md)
 * [深入理解ES6](book/shen-ru-li-jie-es6.md)
-* [plan book](book/plan-book.md)
 * [Js design pattern](book/js-design-pattern.md)
 
 ## 协议
