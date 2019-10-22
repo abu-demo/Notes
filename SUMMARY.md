@@ -12,6 +12,7 @@
 * [《深入理解nodejs》一](book/300a-shen-ru-li-jie-nodejs-300b-yi.md)
 * [深入理解ES6](book/shen-ru-li-jie-es6.md)
 * [Js design pattern](book/js-design-pattern.md)
+* [nodejs设计模式](book/nodejsshe-ji-mo-shi.md)
 
 ## 协议
 
